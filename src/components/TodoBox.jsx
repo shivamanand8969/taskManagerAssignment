@@ -11,7 +11,7 @@ const TodoBox = () => {
 
     function handleInput(e){// if anybody press enter then task will add
         if(e.key == 'Enter'){
-            const uniqueId = generateUniqueId();
+            const uniqueId = generateUniqueId();//this will return a unique id
             dispatch(addTask({ id: uniqueId, content: message, isCompleted: false }))
             setMessage("");
         }
@@ -20,7 +20,7 @@ const TodoBox = () => {
     }
     function handleAddTask() {
         const uniqueId = generateUniqueId();
-        dispatch(addTask({ id: uniqueId, content: message, isCompleted: false }))
+        dispatch(addTask({ id: uniqueId, content: message, isCompleted: false }))//add new task
         setMessage("");
     }
 
@@ -47,9 +47,6 @@ const TodoBox = () => {
 
                     ))
                 }
-
-
-
             </ul>
         </div>
     )
